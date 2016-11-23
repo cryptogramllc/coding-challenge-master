@@ -4,8 +4,6 @@ var React = require('react');
 var Images = React.createClass({
   getInitialState: function(){
         
-        // The pictures array will be populated via AJAX, and 
-        // the favorites one when the user clicks on an image:
         
         return { pictures: [], favorites: [] };
     },
@@ -13,15 +11,14 @@ var Images = React.createClass({
 
     componentDidMount: function(){
         
-        // When the component loads, send a jQuery AJAX request
 
         var self = this;
 
         Date.prototype.yyyymmdd = function() {
-          var mm = this.getMonth() + 1; // getMonth() is zero-based
+          var mm = this.getMonth() + 1; 
           var dd = this.getDate() - 2;
 
-          return [this.getFullYear(), !mm[1] && '-', mm, !dd[1] && '-', dd].join(''); // padding
+          return [this.getFullYear(), !mm[1] && '-', mm, !dd[1] && '-', dd].join(''); 
         };
 
         var date = new Date();
